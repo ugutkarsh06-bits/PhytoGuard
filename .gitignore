@@ -1,0 +1,22 @@
+# Dataset
+train/
+test/
+valid/
+
+# Virtual environment
+m4_tensorflow/
+
+vit_base_model_output/
+saved_models/
+
+# Large model files
+*.keras
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+

@@ -1,0 +1,399 @@
+{
+  "Apple___Apple_scab": {
+    "display_name": "Apple Scab",
+    "plant": "Apple",
+    "status": "diseased",
+    "severity": "moderate",
+    "color": "#f59e0b",
+    "description": "Apple scab is one of the most economically important diseases of apple worldwide. It is caused by the fungus Venturia inaequalis and can cause severe defoliation and fruit loss if left untreated.",
+    "symptoms": [
+      "Olive-green to black velvety lesions on leaves",
+      "Lesions on both upper and lower leaf surfaces",
+      "Infected leaves may turn yellow and drop prematurely",
+      "Scabby, cracked, or distorted fruit with dark spots",
+      "Reduced fruit size and marketability",
+      "Cork-like texture on affected fruit areas"
+    ],
+    "causes": [
+      "Caused by the fungus Venturia inaequalis",
+      "Overwinters in infected fallen leaves",
+      "Ascospores released during wet spring weather",
+      "Spreads via rain splash and wind",
+      "Favored by cool, moist weather (13–24°C)"
+    ],
+    "treatment": [
+      "Apply fungicides (captan, myclobutanil, or mancozeb) at bud-break",
+      "Follow a spray program every 7–14 days during wet weather",
+      "Remove and destroy fallen infected leaves",
+      "Prune trees to improve air circulation",
+      "Use sterol-inhibiting fungicides for curative action within 72 hours of infection"
+    ],
+    "prevention": [
+      "Plant scab-resistant apple varieties (e.g., Liberty, Freedom, Enterprise)",
+      "Rake and destroy fallen leaves each autumn",
+      "Maintain good orchard sanitation",
+      "Ensure adequate spacing for air circulation",
+      "Monitor local disease forecast services for spray timing"
+    ]
+  },
+
+  "Apple___Black_rot": {
+    "display_name": "Apple Black Rot",
+    "plant": "Apple",
+    "status": "diseased",
+    "severity": "high",
+    "color": "#ef4444",
+    "description": "Black rot is a serious fungal disease that affects apples, causing fruit rot, leaf spots (frog-eye leaf spot), and cankers on branches. It is caused by Botryosphaeria obtusa and can lead to significant yield losses.",
+    "symptoms": [
+      "Circular brown lesions with purple borders on leaves (frog-eye leaf spot)",
+      "Fruit rot beginning at the calyx end, turning black",
+      "Mummified black fruits that remain on the tree",
+      "Reddish-brown cankers on branches and trunks",
+      "Premature leaf drop in severe infections",
+      "Black pycnidia (fungal fruiting bodies) visible on cankers"
+    ],
+    "causes": [
+      "Caused by the fungus Botryosphaeria obtusa",
+      "Overwinters in mummified fruit and infected bark",
+      "Spores spread by rain and wind",
+      "Enters through wounds, pruning cuts, or natural openings",
+      "Warm, wet weather (21–30°C) promotes disease development"
+    ],
+    "treatment": [
+      "Remove and destroy all mummified fruits and dead wood",
+      "Apply fungicides containing captan, thiophanate-methyl, or ziram",
+      "Prune out infected branches well below canker margins",
+      "Treat pruning wounds with appropriate protective fungicide",
+      "Spray schedule every 10–14 days from petal fall through harvest"
+    ],
+    "prevention": [
+      "Maintain vigorous tree health through balanced fertilization",
+      "Remove all mummified fruits and debris after harvest",
+      "Avoid tree wounds that allow fungal entry",
+      "Select resistant varieties where available",
+      "Implement a full-season spray program in high-risk areas"
+    ]
+  },
+
+  "Apple___Cedar_apple_rust": {
+    "display_name": "Cedar Apple Rust",
+    "plant": "Apple",
+    "status": "diseased",
+    "severity": "moderate",
+    "color": "#f97316",
+    "description": "Cedar apple rust is a fungal disease requiring two host plants — Eastern red cedar (Juniperus virginiana) and apple — to complete its life cycle. It causes bright orange spots on apple leaves and fruit.",
+    "symptoms": [
+      "Bright orange-yellow spots on upper leaf surface in spring",
+      "Tube-like structures (aecia) on lower leaf surface",
+      "Premature defoliation in heavy infections",
+      "Orange lesions on fruit and fruit stems",
+      "Distorted or cracked fruit surface",
+      "Raised, spore-bearing tubes visible on undersides of leaves"
+    ],
+    "causes": [
+      "Caused by the fungus Gymnosporangium juniperi-virginianae",
+      "Requires both cedar/juniper and apple to complete life cycle",
+      "Orange gelatinous galls form on cedars after spring rain",
+      "Wind carries spores from cedars to apples in spring",
+      "Infection occurs in cool, moist conditions"
+    ],
+    "treatment": [
+      "Apply fungicides (myclobutanil, propiconazole) from pink bud through 2–3 weeks after petal fall",
+      "Remove cedar galls before they release spores",
+      "Protective sprays timed with cedar spore release",
+      "Remove nearby Juniperus hosts if feasible",
+      "Use systemic fungicides for curative action"
+    ],
+    "prevention": [
+      "Plant rust-resistant apple varieties (e.g., Redfree, Williams Pride)",
+      "Remove Eastern red cedars within 1–2 miles if possible",
+      "Begin protective spray programs in early spring",
+      "Scout for orange gelatinous galls on cedars as a warning signal",
+      "Maintain tree vigor through proper nutrition and irrigation"
+    ]
+  },
+
+  "Apple___healthy": {
+    "display_name": "Healthy Apple",
+    "plant": "Apple",
+    "status": "healthy",
+    "severity": "none",
+    "color": "#22c55e",
+    "description": "This apple plant appears healthy with no signs of disease or pest damage. Healthy apple leaves are smooth, deep green, and free from spots, discoloration, or abnormal growth.",
+    "symptoms": [
+      "Leaves are uniformly green with no spots or lesions",
+      "No premature leaf drop or yellowing",
+      "Fruit develops normally without rot or blemish",
+      "Vigorous shoot growth and healthy branching",
+      "No visible cankers or fungal growth on bark"
+    ],
+    "causes": [],
+    "treatment": [
+      "Continue regular monitoring for early signs of disease",
+      "Maintain balanced fertilization program",
+      "Ensure adequate irrigation during dry periods",
+      "Carry out standard pruning for airflow and light penetration"
+    ],
+    "prevention": [
+      "Follow an integrated pest and disease management (IPM) program",
+      "Practice good orchard sanitation",
+      "Monitor weather forecasts for disease-favorable conditions",
+      "Apply preventive sprays during high-risk periods",
+      "Maintain tree health through proper nutrition and watering"
+    ]
+  },
+
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "display_name": "Corn Gray Leaf Spot",
+    "plant": "Corn (Maize)",
+    "status": "diseased",
+    "severity": "high",
+    "color": "#ef4444",
+    "description": "Gray leaf spot (GLS), caused by Cercospora zeae-maydis, is one of the most yield-limiting diseases of corn worldwide. It thrives under humid, warm conditions and can cause complete defoliation in severe cases.",
+    "symptoms": [
+      "Rectangular, tan to gray lesions with parallel edges running between leaf veins",
+      "Lesions initially appear as small, irregular spots",
+      "Gray sporulation on lesion surface in humid conditions",
+      "Premature leaf death (blighting) in severe infections",
+      "Lesions may coalesce, killing entire leaves",
+      "Yield losses up to 50% in severe epidemics"
+    ],
+    "causes": [
+      "Caused by the fungus Cercospora zeae-maydis",
+      "Overwinters in infected corn residue",
+      "Spores spread by wind and splashing rain",
+      "Favored by warm (25–30°C) and humid conditions",
+      "Continuous corn or minimum tillage increases risk",
+      "Dense plant populations reduce air circulation"
+    ],
+    "treatment": [
+      "Apply strobilurin or triazole fungicides at or before symptom onset",
+      "Fungicide application most effective at VT to R1 (tassel to silking) stage",
+      "Use products like azoxystrobin, propiconazole, or pyraclostrobin",
+      "Multiple applications may be needed in high-pressure years"
+    ],
+    "prevention": [
+      "Plant resistant or tolerant hybrids (most effective strategy)",
+      "Rotate crops — avoid continuous corn production",
+      "Till crop residue to reduce inoculum",
+      "Reduce plant density to improve air flow",
+      "Scout fields regularly from V6 onward during warm, humid weather"
+    ]
+  },
+
+  "Corn_(maize)___Common_rust_": {
+    "display_name": "Corn Common Rust",
+    "plant": "Corn (Maize)",
+    "status": "diseased",
+    "severity": "moderate",
+    "color": "#f59e0b",
+    "description": "Common rust, caused by Puccinia sorghi, is widespread across corn-growing regions. While often manageable, severe infections in susceptible hybrids can cause significant yield loss, especially when infection occurs before silking.",
+    "symptoms": [
+      "Small, oval to elongate powdery pustules on both leaf surfaces",
+      "Pustules are brick-red to cinnamon-brown initially",
+      "Pustules turn black as the season progresses",
+      "Pustules may appear on husks and leaf sheaths",
+      "Severe infection causes yellowing and death of leaves",
+      "Premature senescence of heavily infected plants"
+    ],
+    "causes": [
+      "Caused by the obligate parasite Puccinia sorghi",
+      "Spores (urediniospores) spread by wind over long distances",
+      "Overwinters in tropical regions; reinfects temperate zones annually",
+      "Cool temperatures (16–23°C) with high humidity favor infection",
+      "Dew periods longer than 6 hours promote spore germination"
+    ],
+    "treatment": [
+      "Apply fungicides (triazoles or strobilurins) when pustules first appear",
+      "Most effective when applied before tasseling in susceptible hybrids",
+      "Products: propiconazole, azoxystrobin, tebuconazole",
+      "Economic threshold: treat when 5% or more of plants have pustules before silking"
+    ],
+    "prevention": [
+      "Plant rust-resistant corn hybrids",
+      "Early planting to avoid peak rust pressure in late season",
+      "Scout fields after weather events bringing cool, moist air",
+      "Monitor pustule density early for timely fungicide decisions",
+      "Avoid high nitrogen applications that favor disease spread"
+    ]
+  },
+
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "display_name": "Northern Leaf Blight",
+    "plant": "Corn (Maize)",
+    "status": "diseased",
+    "severity": "high",
+    "color": "#ef4444",
+    "description": "Northern leaf blight (NLB), caused by Exserohilum turcicum, is a common fungal disease of corn that can cause significant yield loss, especially when it infects the ear leaf or above during grain fill.",
+    "symptoms": [
+      "Long, elliptical, cigar-shaped gray-green to tan lesions",
+      "Lesions typically 2.5–15 cm long with wavy edges",
+      "Lesions appear first on lower leaves, progressing upward",
+      "Dark sporulation visible on lesions in humid weather",
+      "In severe cases, entire plant appears gray and blighted",
+      "Early infection (before tasseling) can cause yield losses >50%"
+    ],
+    "causes": [
+      "Caused by the fungus Exserohilum turcicum",
+      "Overwinters in infected corn residue",
+      "Spores dispersed by wind and rain",
+      "Favored by moderate temperatures (18–27°C) and high humidity",
+      "Dew or wet conditions for 6+ hours needed for infection",
+      "No-till and reduced tillage increase inoculum levels"
+    ],
+    "treatment": [
+      "Apply fungicides at or before VT/R1 growth stage for best results",
+      "Effective products: azoxystrobin, propiconazole, pyraclostrobin",
+      "Two-pass programs may be warranted in high-risk environments",
+      "Scout for lesions on lower leaves from V8 stage onward"
+    ],
+    "prevention": [
+      "Plant hybrids with NLB resistance (Ht genes provide race-specific resistance)",
+      "Rotate corn with other crops",
+      "Deep till to bury crop residue and reduce inoculum",
+      "Avoid dense planting to improve canopy airflow",
+      "Implement early-season scouting programs"
+    ]
+  },
+
+  "Corn_(maize)___healthy": {
+    "display_name": "Healthy Corn",
+    "plant": "Corn (Maize)",
+    "status": "healthy",
+    "severity": "none",
+    "color": "#22c55e",
+    "description": "This corn plant appears healthy and vigorous. Healthy corn has dark green leaves with no spots, lesions, or discoloration, and develops strong stalks with good ear formation.",
+    "symptoms": [
+      "Leaves are uniformly dark green and upright",
+      "No lesions, spots, or discoloration visible",
+      "Strong, thick stalks with good standability",
+      "Robust tasseling and silking development",
+      "Good ear development and kernel fill"
+    ],
+    "causes": [],
+    "treatment": [
+      "Continue regular scouting for early disease detection",
+      "Maintain soil health with appropriate fertilization",
+      "Ensure adequate soil moisture through irrigation",
+      "Monitor for pest pressure (aphids, corn borer)"
+    ],
+    "prevention": [
+      "Follow a crop rotation schedule to minimize disease pressure",
+      "Use high-quality certified seed from reputable sources",
+      "Scout fields weekly during the growing season",
+      "Optimize plant populations for your hybrid and environment",
+      "Maintain balanced soil fertility through regular testing"
+    ]
+  },
+
+  "Potato___Early_blight": {
+    "display_name": "Potato Early Blight",
+    "plant": "Potato",
+    "status": "diseased",
+    "severity": "moderate",
+    "color": "#f59e0b",
+    "description": "Early blight, caused by Alternaria solani, is a common and widespread potato disease. It typically affects older, lower leaves first and can cause significant defoliation and reduced tuber yield, especially in stressed plants.",
+    "symptoms": [
+      "Dark brown to black angular lesions with concentric rings (target-board pattern)",
+      "Lesions first appear on older, lower leaves",
+      "Yellow halo may surround lesions",
+      "Premature defoliation starting from the bottom of the plant",
+      "Dark, sunken lesions may appear on tuber skin",
+      "Severely affected plants may lose 50–75% of their foliage"
+    ],
+    "causes": [
+      "Caused by the fungus Alternaria solani",
+      "Overwinters in infected plant debris and soil",
+      "Spread by wind, rain splash, and irrigation water",
+      "Favored by warm (24–29°C), alternating wet and dry conditions",
+      "Plant stress (nutrient deficiency, drought) increases susceptibility",
+      "Early-planted or older potato fields are most at risk"
+    ],
+    "treatment": [
+      "Apply fungicides (chlorothalonil, mancozeb, azoxystrobin) at first sign of disease",
+      "Begin spray programs when plants are about 15 cm tall or at first symptom",
+      "Repeat applications every 7–14 days during wet conditions",
+      "Ensure good spray coverage of lower canopy where infection starts",
+      "Tank-mix fungicides to manage resistance"
+    ],
+    "prevention": [
+      "Use certified disease-free seed tubers",
+      "Rotate crops — avoid potato/tomato in the same field for 2–3 years",
+      "Maintain adequate plant nutrition, especially nitrogen",
+      "Avoid overhead irrigation; use drip irrigation where possible",
+      "Plant early-maturing or resistant varieties",
+      "Remove volunteer potato plants that harbor the pathogen"
+    ]
+  },
+
+  "Potato___Late_blight": {
+    "display_name": "Potato Late Blight",
+    "plant": "Potato",
+    "status": "diseased",
+    "severity": "critical",
+    "color": "#dc2626",
+    "description": "Late blight, caused by Phytophthora infestans, is the most devastating potato disease globally. It caused the Irish Potato Famine in the 1840s. Under favorable conditions, it can destroy an entire field within days if not controlled.",
+    "symptoms": [
+      "Water-soaked, pale green lesions on leaves that rapidly turn brown to black",
+      "White, cottony sporulation on underside of leaves in humid conditions",
+      "Entire leaf and stem tissue collapses and turns black",
+      "Brown, firm rot on tubers that extends into the flesh",
+      "Infected tubers have a reddish-brown discoloration beneath the skin",
+      "Characteristic foul odor from infected tissues in advanced stages"
+    ],
+    "causes": [
+      "Caused by the oomycete Phytophthora infestans",
+      "Overwinters in infected seed tubers and volunteer plants",
+      "Spores (sporangia) spread rapidly by wind and rain",
+      "Thrives in cool (10–20°C), wet, and foggy conditions",
+      "Infections can spread throughout a field within 3–5 days",
+      "New, aggressive strains (A2 mating type) have emerged globally"
+    ],
+    "treatment": [
+      "Apply systemic fungicides (metalaxyl, cymoxanil) immediately at first sign of disease",
+      "Alternate with protectant fungicides (mancozeb, chlorothalonil) to manage resistance",
+      "Spray every 5–7 days during warm, wet weather",
+      "Destroy severely infected plants by cutting and removing haulm",
+      "Do not store potentially infected tubers — they will rot"
+    ],
+    "prevention": [
+      "Use certified disease-free seed tubers",
+      "Plant resistant varieties (e.g., Sarpo Mira, Cara)",
+      "Scout fields daily during wet, cool weather",
+      "Use late blight forecasting tools (e.g., BlightPro, SIMCAST)",
+      "Apply preventive fungicide sprays before disease arrives in the area",
+      "Hill up potato rows to protect tubers from infected water runoff",
+      "Avoid working in fields when plants are wet to prevent spore spread"
+    ]
+  },
+
+  "Potato___healthy": {
+    "display_name": "Healthy Potato",
+    "plant": "Potato",
+    "status": "healthy",
+    "severity": "none",
+    "color": "#22c55e",
+    "description": "This potato plant appears healthy and free from disease. Healthy potato plants have dark green, upright foliage with no spots, wilting, or discoloration, and develop well-formed tubers underground.",
+    "symptoms": [
+      "Leaves are uniformly dark green and turgid",
+      "No spots, lesions, yellowing, or wilting",
+      "Vigorous stem growth and branching",
+      "Flowers develop normally",
+      "Tubers are firm, smooth, and free from rot or blemish"
+    ],
+    "causes": [],
+    "treatment": [
+      "Continue regular monitoring for disease and pest pressure",
+      "Maintain adequate soil moisture through irrigation",
+      "Hilling up soil around stems to promote tuber development",
+      "Ensure balanced fertilization with adequate potassium"
+    ],
+    "prevention": [
+      "Always use certified seed potatoes from reputable suppliers",
+      "Rotate crops on a 3–4 year cycle",
+      "Scout for late blight signs after any period of wet, cool weather",
+      "Maintain field hygiene by removing volunteer plants",
+      "Apply preventive fungicide sprays in high-risk climates during growing season"
+    ]
+  }
+}

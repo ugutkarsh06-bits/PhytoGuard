@@ -1,0 +1,14 @@
+# PhytoGuard AI — Web Application Dependencies
+# Install into your existing m4_tensorflow environment:
+#   source ../m4_tensorflow/bin/activate
+#   pip install -r requirements_webapp.txt
+
+Flask>=3.0.0
+Werkzeug>=3.0.0
+
+# Already available in m4_tensorflow environment:
+# torch>=2.9.1
+# transformers>=4.57.1
+# Pillow>=12.0.0
+# opencv-python>=4.12.0
+# numpy>=1.26.4

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhytoGuard AI — Plant Disease Detection</title>
+  <meta name="description" content="AI-powered plant disease detection using Vision Transformer (ViT). Identify diseases in Apple, Corn, and Potato plants with 99.98% accuracy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">
+      <span class="logo-icon">🌿</span>
+      <span>PhytoGuard <span class="logo-ai">AI</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#detect" class="nav-link">Detect</a></li>
+      <li><a href="#samples-section" class="nav-link">Samples</a></li>
+      <li><a href="#history-section" class="nav-link">History</a></li>
+      <li><a href="#model-section" class="nav-link">Model</a></li>
+      <li><a href="#about-section" class="nav-link">About</a></li>
+    </ul>
+    <div class="nav-badge">
+      <span class="pulse-dot"></span>
+      <span>99.98% Accuracy</span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ───────────────────────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span>🔬</span>
+      <span>Vision Transformer · ViT-Base/16 · PyTorch</span>
+    </div>
+    <h1 class="hero-title">
+      AI-Powered<br/>
+      <span class="gradient-text">Plant Disease</span><br/>
+      Detection
+    </h1>
+    <p class="hero-subtitle">
+      Upload a leaf image and get instant, accurate diagnosis powered by a 
+      fine-tuned Vision Transformer achieving <strong>99.98% validation accuracy</strong> 
+      across 11 plant disease classes.
+    </p>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-value">99.98%</div>
+        <div class="stat-label">Val Accuracy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">11</div>
+        <div class="stat-label">Disease Classes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">ViT</div>
+        <div class="stat-label">Architecture</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">~327MB</div>
+        <div class="stat-label">Model Size</div>
+      </div>
+    </div>
+    <a href="#detect" class="btn-primary hero-cta">
+      <span>Start Diagnosis</span>
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div class="hero-visual">
+    <div class="vit-diagram">
+      <div class="vit-title">Vision Transformer</div>
+      <div class="vit-patches">
+        <div class="patch active"></div><div class="patch"></div><div class="patch active"></div>
+        <div class="patch"></div><div class="patch active"></div><div class="patch"></div>
+        <div class="patch active"></div><div class="patch"></div><div class="patch active"></div>
+      </div>
+      <div class="vit-arrow">↓  Patch Embeddings</div>
+      <div class="vit-transformer">
+        <div class="tf-block">Transformer Encoder ×12</div>
+        <div class="tf-block small">Multi-Head Attention</div>
+        <div class="tf-block small">Feed Forward</div>
+      </div>
+      <div class="vit-arrow">↓  Classification Head</div>
+      <div class="vit-output">
+        <div class="out-bar" style="width:85%;background:#22c55e">Apple Scab 85%</div>
+        <div class="out-bar" style="width:10%;background:#f59e0b">Black Rot 10%</div>
+        <div class="out-bar" style="width:5%;background:#6b7280">Other 5%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Detection Panel ────────────────────────────────────────────────────── -->
+<section class="section detect-section" id="detect">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Disease Detection</h2>
+      <p class="section-subtitle">Upload a plant leaf image for instant AI diagnosis</p>
+    </div>
+
+    <div class="detect-grid">
+      <!-- Upload Column -->
+      <div class="upload-column">
+        <div class="upload-zone" id="upload-zone">
+          <div class="upload-inner" id="upload-inner">
+            <div class="upload-icon">
+              <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+              </svg>
+            </div>
+            <p class="upload-title">Drop your image here</p>
+            <p class="upload-subtitle">or click to browse files</p>
+            <p class="upload-hint">JPG, JPEG, PNG · Max 16MB</p>
+            <input type="file" id="file-input" accept=".jpg,.jpeg,.png" hidden />
+            <button class="btn-upload" onclick="document.getElementById('file-input').click()">
+              Choose Image
+            </button>
+          </div>
+          <!-- Preview State -->
+          <div class="upload-preview" id="upload-preview" style="display:none;">
+            <img id="preview-img" src="" alt="Preview" />
+            <div class="preview-overlay">
+              <button class="btn-change" onclick="resetUpload()">Change Image</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analyze Button -->
+        <button class="btn-analyze" id="btn-analyze" onclick="runPrediction()" disabled>
+          <span id="btn-text">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            Analyze Plant
+          </span>
+          <div class="btn-spinner" id="btn-spinner" style="display:none;">
+            <div class="spinner"></div>
+            Analyzing...
+          </div>
+        </button>
+
+        <!-- Validation Message -->
+        <div class="validation-msg" id="validation-msg" style="display:none;"></div>
+      </div>
+
+      <!-- Results Column -->
+      <div class="results-column" id="results-column">
+        <!-- Placeholder -->
+        <div class="results-placeholder" id="results-placeholder">
+          <div class="placeholder-icon">🔍</div>
+          <p>Results will appear here after analysis</p>
+          <p class="placeholder-sub">Upload an image to get started</p>
+        </div>
+
+        <!-- Results Card (hidden until prediction) -->
+        <div class="results-card" id="results-card" style="display:none;">
+
+          <!-- Status Header -->
+          <div class="result-header" id="result-header">
+            <div class="result-status-icon" id="result-icon"></div>
+            <div class="result-header-text">
+              <div class="result-label">Detected Condition</div>
+              <div class="result-disease" id="result-disease"></div>
+              <div class="result-plant" id="result-plant"></div>
+            </div>
+            <div class="result-badge" id="result-badge"></div>
+          </div>
+
+          <!-- Confidence Gauge -->
+          <div class="gauge-section">
+            <div class="gauge-label">Confidence Score</div>
+            <div class="gauge-container">
+              <canvas id="gauge-chart" width="200" height="120"></canvas>
+              <div class="gauge-value" id="gauge-value">0%</div>
+            </div>
+          </div>
+
+          <!-- Top-3 Predictions -->
+          <div class="top3-section">
+            <div class="top3-label">Top Predictions</div>
+            <div id="top3-bars"></div>
+          </div>
+
+          <!-- Inference Info -->
+          <div class="infer-info" id="infer-info"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disease Info Panel -->
+    <div class="disease-info-panel" id="disease-panel" style="display:none;">
+      <div class="disease-panel-header">
+        <div class="panel-icon" id="panel-icon"></div>
+        <div>
+          <h3 id="panel-title"></h3>
+          <p id="panel-description"></p>
+        </div>
+      </div>
+      <div class="disease-tabs">
+        <button class="tab-btn active" onclick="switchTab('symptoms')">Symptoms</button>
+        <button class="tab-btn" onclick="switchTab('causes')">Causes</button>
+        <button class="tab-btn" onclick="switchTab('treatment')">Treatment</button>
+        <button class="tab-btn" onclick="switchTab('prevention')">Prevention</button>
+      </div>
+      <div class="tab-content" id="tab-content"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sample Images ──────────────────────────────────────────────────────── -->
+<section class="section samples-section" id="samples-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Try Sample Images</h2>
+      <p class="section-subtitle">Click any image from our dataset to run instant analysis</p>
+    </div>
+    <div class="samples-grid" id="samples-grid">
+      <div class="loading-samples">Loading samples...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Prediction History ──────────────────────────────────────────────────── -->
+<section class="section history-section" id="history-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Prediction History</h2>
+      <p class="section-subtitle">Your analysis session log</p>
+      <button class="btn-clear" onclick="clearHistory()" id="btn-clear-history" style="display:none;">Clear History</button>
+    </div>
+    <div id="history-container">
+      <div class="history-empty" id="history-empty">
+        <div class="history-empty-icon">📋</div>
+        <p>No predictions yet. Upload an image to get started.</p>
+      </div>
+      <div class="history-grid" id="history-grid" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Model Information ──────────────────────────────────────────────────── -->
+<section class="section model-section" id="model-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Model Information</h2>
+      <p class="section-subtitle">Technical specifications of the deployed Vision Transformer</p>
+    </div>
+    <div class="model-grid" id="model-grid">
+      <div class="loading-model">Loading model info...</div>
+    </div>
+
+    <!-- Training History Chart -->
+    <div class="chart-card">
+      <h3 class="chart-title">Training History — Validation Accuracy</h3>
+      <div class="chart-wrapper">
+        <canvas id="training-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- Classes Table -->
+    <div class="classes-card">
+      <h3 class="chart-title">Supported Disease Classes</h3>
+      <div class="classes-grid" id="classes-grid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ──────────────────────────────────────────────────────────────── -->
+<section class="section about-section" id="about-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">About PhytoGuard AI</h2>
+      <p class="section-subtitle">An end-to-end deep learning project for precision agriculture</p>
+    </div>
+
+    <div class="about-grid">
+      <!-- Project Overview -->
+      <div class="about-card wide">
+        <div class="about-card-icon">🎯</div>
+        <h3>Project Overview</h3>
+        <p>PhytoGuard AI is a computer vision system designed to assist farmers and agronomists in identifying plant diseases early and accurately. The system classifies leaf images into 11 categories covering diseases and healthy states across Apple, Corn (Maize), and Potato crops.</p>
+        <p>The project demonstrates the superiority of Vision Transformers over traditional CNN architectures for fine-grained image classification tasks, achieving near-perfect accuracy on the PlantVillage dataset.</p>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="about-card">
+        <div class="about-card-icon">⚙️</div>
+        <h3>Technology Stack</h3>
+        <ul class="tech-list">
+          <li><span class="tech-badge pytorch">PyTorch 2.9.1</span> Deep learning framework</li>
+          <li><span class="tech-badge hf">🤗 Transformers 4.57.1</span> ViT model library</li>
+          <li><span class="tech-badge flask">Flask</span> Web backend</li>
+          <li><span class="tech-badge pillow">Pillow / OpenCV</span> Image processing</li>
+          <li><span class="tech-badge apple">Apple MPS</span> Metal GPU acceleration</li>
+          <li><span class="tech-badge chartjs">Chart.js</span> Visualization</li>
+        </ul>
+      </div>
+
+      <!-- Model Architecture -->
+      <div class="about-card">
+        <div class="about-card-icon">🧠</div>
+        <h3>Model Architecture</h3>
+        <p>The backbone is <strong>ViT-Base/16</strong> (Vision Transformer) pre-trained on ImageNet-21k and fine-tuned on PlantVillage. The model divides 224×224 images into 16×16 pixel patches, encodes positional embeddings, and applies 12 transformer encoder layers with multi-head self-attention.</p>
+        <div class="arch-flow">
+          <div class="arch-step">Image<br/>224×224</div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-step">Patch<br/>Embed</div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-step">Transformer<br/>×12</div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-step">CLS<br/>Token</div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-step">Classification<br/>Head</div>
+        </div>
+      </div>
+
+      <!-- Training Pipeline -->
+      <div class="about-card">
+        <div class="about-card-icon">📊</div>
+        <h3>Training Pipeline</h3>
+        <ul class="pipeline-list">
+          <li>
+            <div class="pipeline-step">1</div>
+            <div><strong>Data Preparation</strong> — PlantVillage dataset (87K+ images), filtered to 11 classes with offline augmentation</div>
+          </li>
+          <li>
+            <div class="pipeline-step">2</div>
+            <div><strong>Preprocessing</strong> — Resize to 224×224, normalize with mean/std=0.5 using ViTImageProcessor</div>
+          </li>
+          <li>
+            <div class="pipeline-step">3</div>
+            <div><strong>Fine-tuning</strong> — HuggingFace Trainer API, 10 epochs, Apple M4 MPS acceleration</div>
+          </li>
+          <li>
+            <div class="pipeline-step">4</div>
+            <div><strong>Evaluation</strong> — 5,198 validation images, per-class F1 scores, confusion matrix analysis</div>
+          </li>
+          <li>
+            <div class="pipeline-step">5</div>
+            <div><strong>Deployment</strong> — Saved as safetensors, served via Flask REST API</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dataset Info -->
+      <div class="about-card">
+        <div class="about-card-icon">🗂️</div>
+        <h3>Dataset</h3>
+        <div class="dataset-stats">
+          <div class="ds-stat"><span class="ds-num">20,789</span><span class="ds-label">Training Images</span></div>
+          <div class="ds-stat"><span class="ds-num">5,198</span><span class="ds-label">Validation Images</span></div>
+          <div class="ds-stat"><span class="ds-num">11</span><span class="ds-label">Disease Classes</span></div>
+          <div class="ds-stat"><span class="ds-num">3</span><span class="ds-label">Crop Types</span></div>
+        </div>
+        <p style="margin-top:1rem; font-size:0.85rem; color:var(--text-muted);">
+          Sourced from the PlantVillage dataset (Kaggle). Offline augmentation applied: 90°/270° rotations, horizontal flips. RGB images at native resolution.
+        </p>
+      </div>
+
+      <!-- Results -->
+      <div class="about-card">
+        <div class="about-card-icon">🏆</div>
+        <h3>Results &amp; Performance</h3>
+        <div class="perf-table">
+          <div class="perf-row header"><span>Model</span><span>Val Accuracy</span><span>Architecture</span></div>
+          <div class="perf-row best"><span>ViT-Base/16</span><span class="acc-val">99.98%</span><span>Transformer</span></div>
+          <div class="perf-row"><span>ResNet-50</span><span class="acc-val">~96%</span><span>CNN</span></div>
+          <div class="perf-row"><span>Custom CNN</span><span class="acc-val">~98%</span><span>CNN</span></div>
+        </div>
+        <p style="margin-top:1rem; font-size:0.85rem; color:var(--text-muted);">
+          ViT outperforms both CNN baselines, demonstrating the effectiveness of self-attention for plant disease recognition.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <span class="logo-icon">🌿</span>
+      <span>PhytoGuard AI</span>
+    </div>
+    <p class="footer-text">
+      Vision Transformer · 99.98% Accuracy · PyTorch + HuggingFace Transformers
+    </p>
+    <p class="footer-sub">Built with PyTorch · Trained on Apple M4 MPS · Portfolio Project</p>
+  </div>
+</footer>
+
+<!-- Loading overlay -->
+<div class="global-overlay" id="global-overlay" style="display:none;">
+  <div class="overlay-content">
+    <div class="overlay-spinner"></div>
+    <p>Analyzing your plant image...</p>
+    <p class="overlay-sub">Running Vision Transformer inference</p>
+  </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
