@@ -4,7 +4,7 @@ PhytoGuard is a deep learning-based plant disease detection system developed to 
 
 ---
 
-## 📖 Overview
+##  Overview
 
 Plant diseases can significantly reduce crop yield and quality if not identified at an early stage. Manual disease diagnosis requires agricultural expertise and may not always be accessible to farmers.
 
