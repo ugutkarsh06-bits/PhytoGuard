@@ -267,4 +267,4 @@ Manipal University Jaipur
 
 GitHub: https://github.com/madhavkhaitan1105
 
-LinkedIn: *Add your LinkedIn profile here*
+LinkedIn: https://www.linkedin.com/in/madhavkhaitan
