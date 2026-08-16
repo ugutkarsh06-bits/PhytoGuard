@@ -259,14 +259,12 @@ http://localhost:5001
 
 # Author
 
-**Madhav Khaitan**
+**Utkarsh Gangwar**
 
-Computer Science Engineering (AI & ML)
+BITS Pilani
 
-Manipal University Jaipur
+GitHub: https://github.com/ugutkarsh06-bits
 
-GitHub: https://github.com/madhavkhaitan1105
+LinkedIn: https://www.linkedin.com/in/utkarsh-gangwar
 
-LinkedIn: https://www.linkedin.com/in/madhavkhaitan
-
-E-mail : madhavkhaitan@gmail.com
+E-mail : gangwar.utkarsh@outlook.com
